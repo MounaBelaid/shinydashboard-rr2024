@@ -16,6 +16,10 @@ ui <- dashboardPage(
     sidebarMenu(
       checkboxGroupInput("species_filter", "Filter by Species:",
         choices = unique(penguins$species), selected = unique(penguins$species)
+      ),
+      div(
+        style = "text-align:left; font-size: 15px",
+        strong("View Code "), a(icon("fab fa-github"), href = "https://github.com/MounaBelaid/shinydashboard-rr2024/", target = "_blank")
       )
     )
   ),
